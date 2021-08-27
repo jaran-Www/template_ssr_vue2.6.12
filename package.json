@@ -1,0 +1,41 @@
+{
+  "name": "template_2.6.12",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "cross-env RENDER=client vue-cli-service serve",
+    "build:client": "cross-env RENDER=server vue-cli-service build",
+    "build:server": "cross-env TARGET=node vue-cli-service build --no-clean",
+    "build:csr": "cross-env RENDER=client vue-cli-service build",
+    "build": "npm run build:client && npm run build:server",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "3.6.5",
+    "vue": "2.6.12",
+    "vue-router": "3.2.0",
+    "vuex": "3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "4.5.0",
+    "@vue/cli-plugin-eslint": "4.5.0",
+    "@vue/cli-plugin-router": "4.5.0",
+    "@vue/cli-plugin-unit-jest": "4.5.0",
+    "@vue/cli-plugin-vuex": "4.5.0",
+    "@vue/cli-service": "4.5.0",
+    "@vue/eslint-config-airbnb": "5.3.0",
+    "@vue/test-utils": "1.0.3",
+    "babel-eslint": "10.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "6.7.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-vue": "6.2.2",
+    "express": "^4.17.1",
+    "sass": "1.38.1",
+    "sass-loader": "8.0.2",
+    "vue-server-renderer": "2.6.12",
+    "vue-template-compiler": "2.6.12",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

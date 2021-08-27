@@ -1,0 +1,4 @@
+{
+    "server": "bundle.server.json",
+    "client": "bundle.client.json"
+}
