@@ -47,6 +47,16 @@
 
 ##### 引入nginx来将客户端渲染服务器/服务端渲染服务器反代到同一端口上 并利用upstream实现降级容灾
 
+### 问题1
+
+vue-cli @vue/cli 4.5.8 搭建的项目 假设将所有依赖都是设为固定版本后运行 eslint会报
+Configuration for rule "import/no-cycle" is invalid:
+Value "∞" should be integer.
+这是版本问题导致的
+开发依赖eslint-plugin-import 从2.22.1版本开始才支持"∞" 升级版本可解决此问题 如果不升级版本就需要将其改为Infinity
+参考 https://stackoverflow.com/questions/64790681/eslint-error-configuration-for-rule-import-no-cycle-is-invalid
+起因应该是一开始就采用了最新依赖导致的 版本不固定转为版本固定 而导致出现版本问题
+
 ## Project setup
 ```
 npm install
